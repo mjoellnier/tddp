@@ -27,3 +27,23 @@ export const fizzBuzzDecider = numberToDecide => {
   }
   return numberToDecide;
 };
+
+export const fizzBuzzDeciderStage2 = numberToDecide => {
+  if (numberToDecide === 0) {
+    return numberToDecide;
+  }
+  let dividableByThree = numberToDecide % 3 === 0;
+  let dividableByFive = numberToDecide % 5 === 0;
+  let containsThree = (numberToDecide + "").indexOf("3") > -1;
+  let containsFive = (numberToDecide + "").indexOf("5") > -1;
+  if (dividableByThree || containsThree) {
+    if (dividableByFive) {
+      return "FizzBuzz";
+    }
+    return "Fizz";
+  }
+  if (dividableByFive || containsFive) {
+    return "Buzz";
+  }
+  return numberToDecide;
+};

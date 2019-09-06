@@ -1,4 +1,8 @@
-import { fizzBuzzDecider, fizzBuzzCaller } from "./FizzBuzz";
+import {
+  fizzBuzzDecider,
+  fizzBuzzCaller,
+  fizzBuzzDeciderStage2
+} from "./FizzBuzz";
 
 describe("Testing the FizzBuzz caller: ", () => {
   test("Limit 5", done => {
@@ -49,5 +53,37 @@ describe("Testing the FizzBuzz decider: ", () => {
     expect(fizzBuzzDecider(1)).toBe(1);
     expect(fizzBuzzDecider(2)).toBe(2);
     expect(fizzBuzzDecider(4)).toBe(4);
+  });
+});
+
+describe("Testing the FizzBuzz Stage 2 decider: ", () => {
+  test("3 equals Fizz", () => {
+    expect(fizzBuzzDeciderStage2(3)).toBe("Fizz");
+  });
+
+  test("5 equals Buzz", () => {
+    expect(fizzBuzzDeciderStage2(5)).toBe("Buzz");
+  });
+
+  test("15 equals FizzBuzz", () => {
+    expect(fizzBuzzDeciderStage2(15)).toBe("FizzBuzz");
+  });
+
+  test("0 equals 0", () => {
+    expect(fizzBuzzDeciderStage2(0)).toBe(0);
+  });
+
+  test("1, 2 and 4 are plain numbers", () => {
+    expect(fizzBuzzDeciderStage2(1)).toBe(1);
+    expect(fizzBuzzDeciderStage2(2)).toBe(2);
+    expect(fizzBuzzDeciderStage2(4)).toBe(4);
+  });
+
+  test("13 equals Fizz", () => {
+    expect(fizzBuzzDeciderStage2(13)).toBe("Fizz");
+  });
+
+  test("51 equals Buzz", () => {
+    expect(fizzBuzzDeciderStage2(52)).toBe("Buzz");
   });
 });
