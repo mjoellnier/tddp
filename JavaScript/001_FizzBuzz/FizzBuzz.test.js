@@ -1,4 +1,11 @@
-import { fizzBuzzDecider } from "./FizzBuzz";
+import { fizzBuzzDecider, fizzBuzzCaller } from "./FizzBuzz";
+
+describe("Testing the FizzBuzz caller: ", () => {
+  test("Limit 5", done => {
+    expect(fizzBuzzCaller(5)).toStrictEqual([0, 1, 2, "Fizz", 4, "Buzz"]);
+    done();
+  });
+});
 
 describe("Testing the FizzBuzz decider: ", () => {
   test("3 equals Fizz", () => {
@@ -11,6 +18,10 @@ describe("Testing the FizzBuzz decider: ", () => {
 
   test("15 equals FizzBuzz", () => {
     expect(fizzBuzzDecider(15)).toBe("FizzBuzz");
+  });
+
+  test("0 equals 0", () => {
+    expect(fizzBuzzDecider(0)).toBe(0);
   });
 
   test("1, 2 and 4 are plain numbers", () => {
