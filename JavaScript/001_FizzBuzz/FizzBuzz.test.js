@@ -5,6 +5,27 @@ describe("Testing the FizzBuzz caller: ", () => {
     expect(fizzBuzzCaller(5)).toStrictEqual([0, 1, 2, "Fizz", 4, "Buzz"]);
     done();
   });
+  test("Limit 15", done => {
+    expect(fizzBuzzCaller(15)).toStrictEqual([
+      0,
+      1,
+      2,
+      "Fizz",
+      4,
+      "Buzz",
+      "Fizz",
+      7,
+      8,
+      "Fizz",
+      "Buzz",
+      11,
+      "Fizz",
+      13,
+      14,
+      "FizzBuzz"
+    ]);
+    done();
+  });
 });
 
 describe("Testing the FizzBuzz decider: ", () => {
