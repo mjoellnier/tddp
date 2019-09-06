@@ -3,5 +3,16 @@ export const fizzBuzzCaller = limit => {
 };
 
 export const fizzBuzzDecider = numberToDecide => {
-  return null;
+  let dividableByThree = numberToDecide % 3 === 0;
+  let dividableByFive = numberToDecide % 5 === 0;
+  if (dividableByThree) {
+    if (dividableByFive) {
+      return "FizzBuzz";
+    }
+    return "Fizz";
+  }
+  if (dividableByFive) {
+    return "Buzz";
+  }
+  return numberToDecide;
 };
