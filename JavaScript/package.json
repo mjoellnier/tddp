@@ -1,0 +1,29 @@
+{
+  "name": "tddp_javascript",
+  "version": "0.1.0",
+  "description": "The JavaScript implementation of the TDDP project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjoellnier/tddpp.git"
+  },
+  "keywords": [
+    "TDD",
+    "UnitTest",
+    "Java",
+    "JavaScript"
+  ],
+  "author": "Max Wuest",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjoellnier/tddp/issues"
+  },
+  "homepage": "https://github.com/mjoellnier/tddp#readme",
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "jest": "^24.9.0"
+  }
+}
